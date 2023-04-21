@@ -1,0 +1,24 @@
+# Changes here will be overwritten by Copier; do NOT edit manually
+_commit: v0.2.13
+_src_path: gh:entelecheia/hyperfast-python-template
+author: Young Joon Lee
+code_template_answers_file: .copier-hyfi-config.yaml
+code_template_source: gh:entelecheia/hyfi-template
+copyright_year: 2023
+documentaion_tool: jupyter-book
+documentation_url: https://rompot-schedio.entelecheia.ai
+email: entelecheia@hotmail.com
+friendly_name: Rompot Schedio
+github_repo_name: rompot-schedio
+github_username: entelecheia
+package_name: schedio
+project_description: Rompot-Schedio is an innovative and versatile Python library
+    designed to facilitate the creation, manipulation, and control of robotic drawings.
+    The name Rompot-Schedio combines the Greek words ρομπότ (robot) and σχέδιο (drawing),
+    embodying the library's mission to empower users to design, simulate, and execute
+    robotic drawing projects with ease and precision.
+project_license: MIT
+project_name: rompot-schedio
+project_short_description: A Python Library for Robotic Drawings
+use_source_code_skeleton: true
+

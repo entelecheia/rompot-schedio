@@ -1,0 +1,6 @@
+[metadata]
+name = "rompot-schedio"
+description = "A Python Library for Robotic Drawings"
+authors = ["Young Joon Lee <entelecheia@hotmail.com>"]
+license = "MIT"
+homepage = "https://rompot-schedio.entelecheia.ai"
