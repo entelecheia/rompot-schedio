@@ -1,14 +1,17 @@
 # Rompot Schedio
 
 [![pypi-image]][pypi-url]
-[![license-image]][license-url]
 [![version-image]][release-url]
 [![release-date-image]][release-url]
+[![license-image]][license-url]
 [![jupyter-book-image]][docs-url]
+[![codecov][codecov-image]][codecov-url]
 
 <!-- Links: -->
 [hyperfast python template]: https://github.com/entelecheia/hyperfast-python-template
 
+[codecov-image]: https://codecov.io/gh/entelecheia/rompot-schedio/branch/main/graph/badge.svg?token=[REPLACE_ME]
+[codecov-url]: https://codecov.io/gh/entelecheia/rompot-schedio
 [pypi-image]: https://img.shields.io/pypi/v/rompot-schedio
 [license-image]: https://img.shields.io/github/license/entelecheia/rompot-schedio
 [license-url]: https://github.com/entelecheia/rompot-schedio/blob/main/LICENSE
@@ -32,8 +35,6 @@ A Python Library for Robotic Drawings
 
 Rompot-Schedio is an innovative and versatile Python library designed to facilitate the creation, manipulation, and control of robotic drawings. The name Rompot-Schedio combines the Greek words ρομπότ (robot) and σχέδιο (drawing), embodying the library's mission to empower users to design, simulate, and execute robotic drawing projects with ease and precision.
 
-
-
 ## Changelog
 
 See the [CHANGELOG] for more information.
@@ -45,7 +46,6 @@ Contributions are welcome! Please see the [contributing guidelines] for more inf
 ## License
 
 This project is released under the [MIT License][license-url].
-
 
 ## Table of Contents
 
