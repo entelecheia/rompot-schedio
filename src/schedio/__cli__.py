@@ -1,10 +1,14 @@
 """Command line interface for schedio"""
 
 # Importing the libraries
-from hyfi import hydra_main
+import sys
+
+from hyfi import about, hydra_main
 
 
 def main() -> None:
+    """Main function for the CLI"""
+    sys.argv.append(f"--config-path={about.config_path}")
     hydra_main()
 
 
