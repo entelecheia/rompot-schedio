@@ -10,7 +10,7 @@
 <!-- Links: -->
 [hyperfast python template]: https://github.com/entelecheia/hyperfast-python-template
 
-[codecov-image]: https://codecov.io/gh/entelecheia/rompot-schedio/branch/main/graph/badge.svg?token=[REPLACE_ME]
+[codecov-image]: https://codecov.io/gh/entelecheia/rompot-schedio/branch/main/graph/badge.svg?token=MWRAQQYOS7
 [codecov-url]: https://codecov.io/gh/entelecheia/rompot-schedio
 [pypi-image]: https://img.shields.io/pypi/v/rompot-schedio
 [license-image]: https://img.shields.io/github/license/entelecheia/rompot-schedio
