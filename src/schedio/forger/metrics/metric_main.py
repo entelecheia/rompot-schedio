@@ -7,27 +7,29 @@
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 import argparse
 import copy
-import os
 import logging
-import numpy as np
-import time
+import os
 import pickle
-from skimage.io import imsave
+import time
+
+import forger.metrics.util
+import forger.train.stitching
+import forger.ui.library
+import forger.util.logging
+import numpy as np
 import torch
 import torch.utils.data
 import torchvision
-
-from . import geom_metric
-from . import color_metric
-import forger.util.logging
-import forger.metrics.util
 from forger.util.logging import log_tensor
-import forger.train.stitching
-from forger.util.torch_data import get_image_data_iterator_from_dataset, get_image_data_iterator
-import forger.ui.library
-
-from thirdparty.stylegan2_ada_pytorch.training.dataset import ImageFolderDataset
+from forger.util.torch_data import (
+    get_image_data_iterator,
+    get_image_data_iterator_from_dataset,
+)
+from skimage.io import imsave
 from thirdparty.stylegan2_ada_pytorch.torch_utils.misc import InfiniteSampler
+from thirdparty.stylegan2_ada_pytorch.training.dataset import ImageFolderDataset
+
+from . import color_metric, geom_metric
 
 logger = logging.getLogger(__name__)
 

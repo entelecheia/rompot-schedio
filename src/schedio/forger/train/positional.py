@@ -5,13 +5,13 @@
 # and any modifications thereto.  Any use, reproduction, disclosure or
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
-from abc import ABC, abstractmethod
 import logging
 import math
+from abc import ABC, abstractmethod
+
 import numpy as np
 import torch
 import torch.nn as nn
-
 from forger.util.logging import log_tensor
 
 logger = logging.getLogger(__name__)

@@ -6,23 +6,23 @@
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 import argparse
-import os
 import logging
-import numpy as np
+import os
 import time
-from skimage.io import imsave, imread
+
+import forger.metrics.util
+import forger.ui.brush
+import forger.ui.library
+import forger.util.img_proc
+import forger.util.logging
+import forger.viz.style_transfer
+import forger.viz.visualize as visualize
+import numpy as np
 import torch
 import torch.utils.data
-
-import forger.ui.brush
-import forger.util.logging
-import forger.metrics.util
-import forger.viz.visualize as visualize
-from forger.util.logging import log_tensor
-import forger.ui.library
-import forger.viz.style_transfer
-import forger.util.img_proc
 import tqdm
+from forger.util.logging import log_tensor
+from skimage.io import imread, imsave
 
 logger = logging.getLogger(__name__)
 

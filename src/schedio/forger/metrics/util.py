@@ -6,16 +6,15 @@
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 import logging
-import numpy as np
 import os
 import re
-import torch
-import torch.utils.data
 import warnings
 
-from forger.util.torch_data import get_image_data_iterator
-
 import forger.ui.brush
+import numpy as np
+import torch
+import torch.utils.data
+from forger.util.torch_data import get_image_data_iterator
 
 logger = logging.getLogger(__name__)
 

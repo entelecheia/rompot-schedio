@@ -8,18 +8,22 @@
 import argparse
 import logging
 import os
+import random
+
+import forger.experimental.autoenc.factory as factory
+import forger.train.run_util as run_util
 import tensorboardX
 import torch
 import torchvision
-from torch.utils.data import DataLoader
 import wandb
-import random
-
-import forger.train.run_util as run_util
-import forger.experimental.autoenc.factory as factory
-from forger.experimental.autoenc.ae_conv import add_model_flags as ae_conv_add_model_flags
-from forger.experimental.autoenc.simple_autoencoder import add_model_flags as sa_add_model_flags
+from forger.experimental.autoenc.ae_conv import (
+    add_model_flags as ae_conv_add_model_flags,
+)
+from forger.experimental.autoenc.simple_autoencoder import (
+    add_model_flags as sa_add_model_flags,
+)
 from forger.util.logging import log_tensor
+from torch.utils.data import DataLoader
 
 logger = logging.getLogger(__name__)
 

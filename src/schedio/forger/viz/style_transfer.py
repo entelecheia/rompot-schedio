@@ -6,8 +6,9 @@
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 import logging
-import torch
+
 import numpy as np
+import torch
 
 logger = logging.getLogger(__name__)
 

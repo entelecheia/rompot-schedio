@@ -7,14 +7,13 @@
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 import json
 import logging
+
 import numpy as np
-from skimage.io import imsave
-
-from tornado.websocket import WebSocketHandler
 import tornado.gen
-
 from forger.ui.brush import PaintingHelper
 from forger.util.logging import log_tensor
+from skimage.io import imsave
+from tornado.websocket import WebSocketHandler
 
 logger = logging.getLogger(__name__)
 

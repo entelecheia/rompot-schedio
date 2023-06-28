@@ -5,13 +5,12 @@
 # and any modifications thereto.  Any use, reproduction, disclosure or
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
-import torch
 import logging
 
+import torch
 import torch.utils.data
-
-from thirdparty.stylegan2_ada_pytorch.training.dataset import ImageFolderDataset
 from thirdparty.stylegan2_ada_pytorch.torch_utils.misc import InfiniteSampler
+from thirdparty.stylegan2_ada_pytorch.training.dataset import ImageFolderDataset
 
 logger = logging.getLogger(__name__)
 

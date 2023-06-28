@@ -24,7 +24,6 @@ pyspng = "=0.1.0"
 scikit-image = "0.17.2"
 tornado = "6.1"
 werkzeug = "1.0.1"
-torchmetrics = "^0.11.4"
 
 [tool.poetry.group.dev]
 optional = true
@@ -51,7 +50,7 @@ skip = ['_version.py', 'node_modules', '_build', 'docs', 'tests', 'venv', '.copi
 
 [tool.flake8]
 ignore = ['F401', 'E501', 'W503']
-exclude = ["node_modules", "_build", "docs", "tests", "venv", ".copier-template", ".refs"]
+exclude = ["node_modules", "_build", "docs", "tests", "venv", ".copier-template", ".refs", "src/schedio/forger"]
 per-file-ignores = ['__init__.py:F401', '_version.py:W292']
 
 [tool.mypy]

@@ -6,24 +6,28 @@
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 import argparse
-import os
 import logging
-import numpy as np
+import os
 import time
-# TODO: would be best to standardize image output functions, but this is pooled from many sources
-from skimage.io import imsave, imread
-import matplotlib.pyplot as plt
-import torch
-import torchvision
-import torch.utils.data
-from PIL import Image, ImageDraw, ImageFont
 
-import forger.ui.brush
-import forger.util.logging
 import forger.metrics.util
 import forger.train.stitching
+import forger.ui.brush
+import forger.util.logging
+import matplotlib.pyplot as plt
+import numpy as np
+import torch
+import torch.utils.data
+import torchvision
 from forger.util.logging import log_tensor
-from forger.util.torch_data import get_image_data_iterator, get_image_data_iterator_from_dataset
+from forger.util.torch_data import (
+    get_image_data_iterator,
+    get_image_data_iterator_from_dataset,
+)
+from PIL import Image, ImageDraw, ImageFont
+
+# TODO: would be best to standardize image output functions, but this is pooled from many sources
+from skimage.io import imread, imsave
 
 logger = logging.getLogger(__name__)
 

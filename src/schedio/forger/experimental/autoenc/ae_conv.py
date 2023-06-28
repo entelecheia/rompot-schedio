@@ -7,7 +7,6 @@
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 import numpy as np
 import torch.nn as nn
-
 from forger.experimental.autoenc.base import BaseGeoEncoder
 
 

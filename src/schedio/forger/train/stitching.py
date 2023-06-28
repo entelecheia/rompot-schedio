@@ -6,12 +6,12 @@
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 import copy
-import numpy as np
 import random
-import torch
-import torchvision
-import torch.nn as nn
 
+import numpy as np
+import torch
+import torch.nn as nn
+import torchvision
 from thirdparty.stylegan2_ada_pytorch.dnnlib.util import EasyDict
 
 

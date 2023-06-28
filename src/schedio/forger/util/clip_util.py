@@ -6,26 +6,27 @@
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 import logging
-import torch
-import torchvision
-import numpy as np
-import clip
-import pickle
 import os
-import torch.nn.functional as F
-import torch.utils.data
+import pickle
 import re
 
-import thirdparty.stylegan2_ada_pytorch.experiment.util.latent as latent
-from forger.util.torch_data import get_image_data_iterator_from_dataset, get_image_data_iterator
-
-from thirdparty.stylegan2_ada_pytorch.training.dataset import ImageFolderDataset
-from thirdparty.stylegan2_ada_pytorch.torch_utils.misc import InfiniteSampler
-
-import forger.train.losses
+import clip
 import forger.metrics.geom_metric
-from forger.util.logging import log_tensor
+import forger.train.losses
+import numpy as np
 import PIL
+import thirdparty.stylegan2_ada_pytorch.experiment.util.latent as latent
+import torch
+import torch.nn.functional as F
+import torch.utils.data
+import torchvision
+from forger.util.logging import log_tensor
+from forger.util.torch_data import (
+    get_image_data_iterator,
+    get_image_data_iterator_from_dataset,
+)
+from thirdparty.stylegan2_ada_pytorch.torch_utils.misc import InfiniteSampler
+from thirdparty.stylegan2_ada_pytorch.training.dataset import ImageFolderDataset
 
 logger = logging.getLogger(__name__)
 

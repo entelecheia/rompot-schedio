@@ -7,10 +7,11 @@
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 import glob
 import logging
-import numpy as np
 import os
 import re
 import sys
+
+import numpy as np
 import torch
 
 logger = logging.getLogger(__name__)

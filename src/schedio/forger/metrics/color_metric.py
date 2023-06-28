@@ -6,10 +6,10 @@
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 import logging
-import torch
 
-from forger.util.logging import log_tensor
 import forger.util.color
+import torch
+from forger.util.logging import log_tensor
 
 logger = logging.getLogger(__name__)
 

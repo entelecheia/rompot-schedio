@@ -6,7 +6,6 @@
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 import torch.nn as nn
-
 from forger.experimental.autoenc.base import BaseGeoEncoder
 
 

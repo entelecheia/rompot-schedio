@@ -6,9 +6,10 @@
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 import logging
+
 import torch
-from forger.viz.bundled import load_bundled_geometry_image
 from forger.util.logging import log_tensor
+from forger.viz.bundled import load_bundled_geometry_image
 
 logger = logging.getLogger(__name__)
 

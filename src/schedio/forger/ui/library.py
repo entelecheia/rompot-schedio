@@ -5,18 +5,18 @@
 # and any modifications thereto.  Any use, reproduction, disclosure or
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
+import io
 import logging
 import os
 import pickle
-import re
-import torch
 import random
-import numpy as np
+import re
 import zipfile
-import PIL
-import io
 
 import forger.metrics.util
+import numpy as np
+import PIL
+import torch
 
 logger = logging.getLogger(__name__)
 

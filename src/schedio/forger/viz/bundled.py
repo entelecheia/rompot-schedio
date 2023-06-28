@@ -6,9 +6,10 @@
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 import os
+
 import torch
-from skimage.io import imread
 import torchvision
+from skimage.io import imread
 
 BUNDLED_IMAGES_PATH = os.path.realpath(
     os.path.join(os.path.dirname(os.path.realpath(__file__)),

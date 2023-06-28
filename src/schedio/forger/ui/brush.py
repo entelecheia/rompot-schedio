@@ -6,26 +6,26 @@
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 import copy
+import json
+
 #import cv2
 import logging
-import json
 import math
-import matplotlib.pyplot as plt
-import numpy as np
 import os
-import torch
-from skimage.io import imsave, imread
 
 import forger.experimental.autoenc.factory as factory
+import forger.train.stitching as stitching
+import matplotlib.pyplot as plt
+import numpy as np
 import thirdparty.stylegan2_ada_pytorch.dnnlib as dnnlib
 import thirdparty.stylegan2_ada_pytorch.legacy as legacy
-from thirdparty.stylegan2_ada_pytorch.training.networks_modified import Generator
-
-from forger.util.logging import log_tensor
+import torch
 
 # TODO: this is a circular import which must be fixed
 from forger.ui.mapper import StyleUVSMapper
-import forger.train.stitching as stitching
+from forger.util.logging import log_tensor
+from skimage.io import imread, imsave
+from thirdparty.stylegan2_ada_pytorch.training.networks_modified import Generator
 
 logger = logging.getLogger(__name__)
 

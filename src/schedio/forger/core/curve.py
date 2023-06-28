@@ -8,9 +8,10 @@
 import bisect
 import logging
 import math
+import random
+
 import numpy as np
 from skimage.draw import line
-import random
 
 logger = logging.getLogger(__name__)
 

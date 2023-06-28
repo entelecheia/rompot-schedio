@@ -14,9 +14,9 @@ import re
 import shutil
 import stat
 import sys
-import torch
 
 import forger.util.logging
+import torch
 
 logger = logging.getLogger(__name__)
 

@@ -5,14 +5,14 @@
 # and any modifications thereto.  Any use, reproduction, disclosure or
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
-from abc import ABC, abstractmethod
 import logging
 import re
+from abc import ABC, abstractmethod
+
+import forger.metrics.geom_metric
 import torch
 import torch.nn as nn
 import torchvision.transforms
-
-import forger.metrics.geom_metric
 
 logger = logging.getLogger(__name__)
 

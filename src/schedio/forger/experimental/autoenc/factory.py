@@ -6,11 +6,11 @@
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 import logging
+
+import forger.experimental.autoenc.ae_conv as ae_conv
+import forger.experimental.autoenc.simple_autoencoder as simple_autoencoder
 import torch
 import torch.nn as nn
-
-import forger.experimental.autoenc.simple_autoencoder as simple_autoencoder
-import forger.experimental.autoenc.ae_conv as ae_conv
 
 logger = logging.getLogger(__name__)
 

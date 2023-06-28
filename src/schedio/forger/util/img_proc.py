@@ -6,19 +6,17 @@
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 import logging
-import numpy as np
 import random
+
+import numpy as np
 import torch
 import torchvision
-from scipy.stats import entropy as scipy_entropy
-from skimage.transform import resize
-from skimage.measure import shannon_entropy
-from skimage.filters import threshold_otsu, rank
-from skimage.morphology import erosion, dilation, opening, closing
-from skimage.morphology import disk
-from skimage.transform import rescale
-
 from forger.util.logging import log_tensor
+from scipy.stats import entropy as scipy_entropy
+from skimage.filters import rank, threshold_otsu
+from skimage.measure import shannon_entropy
+from skimage.morphology import closing, dilation, disk, erosion, opening
+from skimage.transform import rescale, resize
 
 logger = logging.getLogger(__name__)
 

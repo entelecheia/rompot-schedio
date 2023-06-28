@@ -6,22 +6,24 @@
 # distribution of this software and related documentation without an express
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 import argparse
-import os
 import logging
-import numpy as np
+import os
 import time
-from skimage.io import imsave
+
+import forger.metrics.util
+import forger.util.logging
+import forger.viz.visualize as visualize
+import numpy as np
 import torch
 import torch.utils.data
-
-import forger.util.logging
-import forger.metrics.util
-import forger.viz.visualize as visualize
 from forger.util.logging import log_tensor
-from forger.util.torch_data import get_image_data_iterator_from_dataset, get_image_data_iterator
-
-from thirdparty.stylegan2_ada_pytorch.training.dataset import ImageFolderDataset
+from forger.util.torch_data import (
+    get_image_data_iterator,
+    get_image_data_iterator_from_dataset,
+)
+from skimage.io import imsave
 from thirdparty.stylegan2_ada_pytorch.torch_utils.misc import InfiniteSampler
+from thirdparty.stylegan2_ada_pytorch.training.dataset import ImageFolderDataset
 
 logger = logging.getLogger(__name__)
 

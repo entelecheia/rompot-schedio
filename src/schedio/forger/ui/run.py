@@ -8,29 +8,27 @@
 from __future__ import print_function
 
 import argparse
+import io
 import logging
 import os
+import random
+import re
 import sys
 import warnings
-import io
 
-import torch
 import flask
-from flask import Flask, render_template, Response
-from tornado.wsgi import WSGIContainer
-from tornado.web import Application, FallbackHandler
-from tornado.ioloop import IOLoop
-import PIL
-import numpy as np
-import re
-import random
-
-from forger.ui.util import DrawingWebSocketHandler
+import forger.ui.brush
 import forger.ui.library
 import forger.ui.util
-import forger.ui.brush
-
 import forger.util
+import numpy as np
+import PIL
+import torch
+from flask import Flask, Response, render_template
+from forger.ui.util import DrawingWebSocketHandler
+from tornado.ioloop import IOLoop
+from tornado.web import Application, FallbackHandler
+from tornado.wsgi import WSGIContainer
 
 logger = logging.getLogger(__name__)
 
