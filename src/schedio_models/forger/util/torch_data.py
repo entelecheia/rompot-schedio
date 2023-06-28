@@ -10,8 +10,8 @@ import logging
 import torch
 import torch.utils.data
 
-from models.stylegan2_ada_pytorch.torch_utils.misc import InfiniteSampler
-from models.stylegan2_ada_pytorch.training.dataset import ImageFolderDataset
+from schedio_models.stylegan2_ada_pytorch.torch_utils.misc import InfiniteSampler
+from schedio_models.stylegan2_ada_pytorch.training.dataset import ImageFolderDataset
 
 logger = logging.getLogger(__name__)
 

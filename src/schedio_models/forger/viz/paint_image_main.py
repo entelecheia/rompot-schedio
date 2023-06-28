@@ -16,14 +16,14 @@ import torch.utils.data
 import tqdm
 from skimage.io import imread, imsave
 
-import models.forger.metrics.util
-import models.forger.ui.brush
-import models.forger.ui.library
-import models.forger.util.img_proc
-import models.forger.util.logging
-import models.forger.viz.style_transfer
-import models.forger.viz.visualize as visualize
-from models.forger.util.logging import log_tensor
+import schedio_models.forger.metrics.util
+import schedio_models.forger.ui.brush
+import schedio_models.forger.ui.library
+import schedio_models.forger.util.img_proc
+import schedio_models.forger.util.logging
+import schedio_models.forger.viz.style_transfer
+import schedio_models.forger.viz.visualize as visualize
+from schedio_models.forger.util.logging import log_tensor
 
 logger = logging.getLogger(__name__)
 

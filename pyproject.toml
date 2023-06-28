@@ -9,7 +9,7 @@ repository = "https://github.com/entelecheia/rompot-schedio"
 readme = "README.md"
 packages = [
     { include = "schedio", from = "src" },
-    { include = "models", from = "src" },
+    { include = "schedio_models", from = "src" },
 ]
 
 [tool.poetry.scripts]
@@ -79,8 +79,7 @@ exclude = [
     "venv",
     ".copier-template",
     ".refs",
-    "src/models/forger",
-    "src/models/stylegan2_ada_pytorch",
+    "src/schedio_models",
 ]
 per-file-ignores = ['__init__.py:F401', '_version.py:W292']
 

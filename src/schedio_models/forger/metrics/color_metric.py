@@ -9,8 +9,8 @@ import logging
 
 import torch
 
-import models.forger.util.color
-from models.forger.util.logging import log_tensor
+import schedio_models.forger.util.color
+from schedio_models.forger.util.logging import log_tensor
 
 logger = logging.getLogger(__name__)
 

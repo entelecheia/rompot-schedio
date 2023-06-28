@@ -18,15 +18,15 @@ import numpy as np
 import torch
 from skimage.io import imread, imsave
 
-import models.forger.experimental.autoenc.factory as factory
-import models.forger.train.stitching as stitching
-import models.stylegan2_ada_pytorch.dnnlib as dnnlib
-import models.stylegan2_ada_pytorch.legacy as legacy
+import schedio_models.forger.experimental.autoenc.factory as factory
+import schedio_models.forger.train.stitching as stitching
+import schedio_models.stylegan2_ada_pytorch.dnnlib as dnnlib
+import schedio_models.stylegan2_ada_pytorch.legacy as legacy
 
 # TODO: this is a circular import which must be fixed
-from models.forger.ui.mapper import StyleUVSMapper
-from models.forger.util.logging import log_tensor
-from models.stylegan2_ada_pytorch.training.networks_modified import Generator
+from schedio_models.forger.ui.mapper import StyleUVSMapper
+from schedio_models.forger.util.logging import log_tensor
+from schedio_models.stylegan2_ada_pytorch.training.networks_modified import Generator
 
 logger = logging.getLogger(__name__)
 

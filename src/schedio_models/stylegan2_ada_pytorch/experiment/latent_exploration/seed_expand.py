@@ -6,9 +6,11 @@ import forger.experimental.autoenc.factory as factory
 import numpy as np
 import torch
 
-from models.stylegan2_ada_pytorch import dnnlib, legacy
-from models.stylegan2_ada_pytorch.experiment.util import image, latent
-from models.stylegan2_ada_pytorch.training.training_loop_modified import save_image_grid
+from schedio_models.stylegan2_ada_pytorch import dnnlib, legacy
+from schedio_models.stylegan2_ada_pytorch.experiment.util import image, latent
+from schedio_models.stylegan2_ada_pytorch.training.training_loop_modified import (
+    save_image_grid,
+)
 
 logger = logging.getLogger(__name__)
 

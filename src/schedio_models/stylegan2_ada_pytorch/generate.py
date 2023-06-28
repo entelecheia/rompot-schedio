@@ -54,16 +54,16 @@ def generate_images(
 
     \b
     # Generate curated MetFaces images without truncation (Fig.10 left)
-    python -m models.stylegan2_ada_pytorch.generate --outdir=out --trunc=1 --seeds=85,265,297,849 \\
+    python -m schedio_models.stylegan2_ada_pytorch.generate --outdir=out --trunc=1 --seeds=85,265,297,849 \\
         --gan_checkpt=https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/metfaces.pkl
 
     \b
     # Generate uncurated MetFaces images with truncation (Fig.12 upper left)
-    python -m models.stylegan2_ada_pytorch.generate --outdir=out --trunc=0.7 --seeds=600-605 \\
+    python -m schedio_models.stylegan2_ada_pytorch.generate --outdir=out --trunc=0.7 --seeds=600-605 \\
         --gan_checkpt=https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/metfaces.pkl
 
     Examples for Forger model:
-    python -m models.stylegan2_ada_pytorch.generate --outdir=out --seeds=600-605 \\
+    python -m schedio_models.stylegan2_ada_pytorch.generate --outdir=out --seeds=600-605 \\
         --gan_checkpt=<workspace>/experiment/some_forger_gan_checkpt.pkl \\
         --encoder_checkpt=<workspace>/experiment/geom_encoder_used.pkl \\
         --geom_image=<workspace>/data/geom_image.png

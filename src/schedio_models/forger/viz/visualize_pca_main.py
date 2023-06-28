@@ -17,16 +17,16 @@ from skimage.io import imsave
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 
-import models.forger.metrics.util
-import models.forger.util.logging
-import models.forger.viz.visualize as visualize
-from models.forger.util.logging import log_tensor
-from models.forger.util.torch_data import (
+import schedio_models.forger.metrics.util
+import schedio_models.forger.util.logging
+import schedio_models.forger.viz.visualize as visualize
+from schedio_models.forger.util.logging import log_tensor
+from schedio_models.forger.util.torch_data import (
     get_image_data_iterator,
     get_image_data_iterator_from_dataset,
 )
-from models.stylegan2_ada_pytorch.torch_utils.misc import InfiniteSampler
-from models.stylegan2_ada_pytorch.training.dataset import ImageFolderDataset
+from schedio_models.stylegan2_ada_pytorch.torch_utils.misc import InfiniteSampler
+from schedio_models.stylegan2_ada_pytorch.training.dataset import ImageFolderDataset
 
 logger = logging.getLogger(__name__)
 

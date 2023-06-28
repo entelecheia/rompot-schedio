@@ -14,8 +14,8 @@ import numpy as np
 import torch
 import torch.utils.data
 
-import models.forger.ui.brush
-from models.forger.util.torch_data import get_image_data_iterator
+import schedio_models.forger.ui.brush
+from schedio_models.forger.util.torch_data import get_image_data_iterator
 
 logger = logging.getLogger(__name__)
 

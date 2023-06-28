@@ -13,7 +13,7 @@ import torch
 import torch.nn as nn
 import torchvision
 
-from models.stylegan2_ada_pytorch.dnnlib.util import EasyDict
+from schedio_models.stylegan2_ada_pytorch.dnnlib.util import EasyDict
 
 
 class BlendedFeatures:

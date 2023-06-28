@@ -13,7 +13,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from models.forger.util.logging import log_tensor
+from schedio_models.forger.util.logging import log_tensor
 
 logger = logging.getLogger(__name__)
 

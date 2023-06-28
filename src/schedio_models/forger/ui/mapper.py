@@ -9,8 +9,8 @@ import logging
 
 import torch
 
-from models.forger.util.logging import log_tensor
-from models.forger.viz.bundled import load_bundled_geometry_image
+from schedio_models.forger.util.logging import log_tensor
+from schedio_models.forger.viz.bundled import load_bundled_geometry_image
 
 logger = logging.getLogger(__name__)
 

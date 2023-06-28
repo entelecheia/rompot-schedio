@@ -13,8 +13,8 @@ import tornado.gen
 from skimage.io import imsave
 from tornado.websocket import WebSocketHandler
 
-from models.forger.ui.brush import PaintingHelper
-from models.forger.util.logging import log_tensor
+from schedio_models.forger.ui.brush import PaintingHelper
+from schedio_models.forger.util.logging import log_tensor
 
 logger = logging.getLogger(__name__)
 

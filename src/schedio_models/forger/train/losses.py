@@ -13,7 +13,7 @@ import torch
 import torch.nn as nn
 import torchvision.transforms
 
-import models.forger.metrics.geom_metric
+import schedio_models.forger.metrics.geom_metric
 
 logger = logging.getLogger(__name__)
 

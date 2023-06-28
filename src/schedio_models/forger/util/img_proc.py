@@ -17,7 +17,7 @@ from skimage.measure import shannon_entropy
 from skimage.morphology import closing, dilation, disk, erosion, opening
 from skimage.transform import rescale, resize
 
-from models.forger.util.logging import log_tensor
+from schedio_models.forger.util.logging import log_tensor
 
 logger = logging.getLogger(__name__)
 

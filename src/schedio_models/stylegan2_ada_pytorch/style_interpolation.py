@@ -77,11 +77,11 @@ def generate_style_mix(
 
     \b
     # for original StyleGAN2
-    python -m models.stylegan2_ada_pytorch.style_interpolation --outdir=out --rows=85,100,75,458,1500 --cols=55,821,1789,293 \\
+    python -m schedio_models.stylegan2_ada_pytorch.style_interpolation --outdir=out --rows=85,100,75,458,1500 --cols=55,821,1789,293 \\
         --gan_checkpt=https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/metfaces.pkl
 
     \b
-    python -m models.stylegan2_ada_pytorch.interpolation \\
+    python -m schedio_models.stylegan2_ada_pytorch.interpolation \\
         --outdir=out --a=85,100,75,458,1500 --b=55,821,1789,293 \\
         --gan_checkpt=<workspace>/experiment/some_forger_gan_checkpt.pkl \\
         --encoder_checkpt=<workspace>/experiment/geom_encoder_used.pkl \\

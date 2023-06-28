@@ -8,7 +8,7 @@
 import numpy as np
 import torch.nn as nn
 
-from models.forger.experimental.autoenc.base import BaseGeoEncoder
+from schedio_models.forger.experimental.autoenc.base import BaseGeoEncoder
 
 
 def add_model_flags(parser):

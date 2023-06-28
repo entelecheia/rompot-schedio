@@ -17,7 +17,7 @@ import sys
 
 import torch
 
-import models.forger.util.logging
+import schedio_models.forger.util.logging
 
 logger = logging.getLogger(__name__)
 

@@ -17,13 +17,13 @@ import torchvision.transforms
 from torch import nn
 from torch.nn import functional as F
 
-import models.forger.util.color
-from models.forger.util.logging import log_tensor
+import schedio_models.forger.util.color
+from schedio_models.forger.util.logging import log_tensor
 
 logger = logging.getLogger(__name__)
 
 # TODO(aliceli): restore when this is merged
-#from models.stylegan2_ada_pytorch.training.geom_loss import gradientLayer
+#from schedio_models.stylegan2_ada_pytorch.training.geom_loss import gradientLayer
 
 # Code largely borrowed from stylegan2
 #----------------------------------------------------------------------------

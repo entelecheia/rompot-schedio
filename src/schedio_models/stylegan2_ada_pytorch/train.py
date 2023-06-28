@@ -577,7 +577,7 @@ def main(**config_kwargs):
     \b
     # Train with custom dataset using 1 GPU.
 
-    python3 -m models.stylegan2_ada_pytorch.train --gpus 1 --batch 8 \
+    python3 -m schedio_models.stylegan2_ada_pytorch.train --gpus 1 --batch 8 \
     --outdir /home/user/Documents/experiment/art-forger/forger_inplace/viz_grid \
     --data /home/user/Documents/data/73467/proc0_256_aug0.zip \
     --kimg 1500 --color_triads 1 \

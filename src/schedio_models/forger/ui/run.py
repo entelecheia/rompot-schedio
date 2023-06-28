@@ -25,11 +25,11 @@ from tornado.ioloop import IOLoop
 from tornado.web import Application, FallbackHandler
 from tornado.wsgi import WSGIContainer
 
-import models.forger.ui.brush
-import models.forger.ui.library
-import models.forger.ui.util
-import models.forger.util
-from models.forger.ui.util import DrawingWebSocketHandler
+import schedio_models.forger.ui.brush
+import schedio_models.forger.ui.library
+import schedio_models.forger.ui.util
+import schedio_models.forger.util
+from schedio_models.forger.ui.util import DrawingWebSocketHandler
 
 logger = logging.getLogger(__name__)
 

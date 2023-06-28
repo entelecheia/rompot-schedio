@@ -169,12 +169,12 @@ def run_projection(
 
     \b
     # For projecting using the original StyleGAN2 model -
-    python -m models.stylegan2_ada_pytorch.projector --outdir=out --target=~/mytargetimg.png \\
+    python -m schedio_models.stylegan2_ada_pytorch.projector --outdir=out --target=~/mytargetimg.png \\
         --gan_checkpt=https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/ffhq.pkl
 
     \b
     # For projecting using the Forger model
-     python -m models.stylegan2_ada_pytorch.projector \\
+     python -m schedio_models.stylegan2_ada_pytorch.projector \\
         --gan_checkpt=<workspace>/experiment/some_forger_gan_checkpt.pkl \\
         --encoder_checkpt=<workspace>/experiment/geom_encoder_used.pkl \\
         --geom_image=<workspace>/data/geom_image.png

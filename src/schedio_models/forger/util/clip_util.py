@@ -18,16 +18,16 @@ import torch.nn.functional as F
 import torch.utils.data
 import torchvision
 
-import models.forger.metrics.geom_metric
-import models.forger.train.losses
-import models.stylegan2_ada_pytorch.experiment.util.latent as latent
-from models.forger.util.logging import log_tensor
-from models.forger.util.torch_data import (
+import schedio_models.forger.metrics.geom_metric
+import schedio_models.forger.train.losses
+import schedio_models.stylegan2_ada_pytorch.experiment.util.latent as latent
+from schedio_models.forger.util.logging import log_tensor
+from schedio_models.forger.util.torch_data import (
     get_image_data_iterator,
     get_image_data_iterator_from_dataset,
 )
-from models.stylegan2_ada_pytorch.torch_utils.misc import InfiniteSampler
-from models.stylegan2_ada_pytorch.training.dataset import ImageFolderDataset
+from schedio_models.stylegan2_ada_pytorch.torch_utils.misc import InfiniteSampler
+from schedio_models.stylegan2_ada_pytorch.training.dataset import ImageFolderDataset
 
 logger = logging.getLogger(__name__)
 

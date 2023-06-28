@@ -10,8 +10,8 @@ import logging
 import torch
 import torch.nn as nn
 
-import models.forger.experimental.autoenc.ae_conv as ae_conv
-import models.forger.experimental.autoenc.simple_autoencoder as simple_autoencoder
+import schedio_models.forger.experimental.autoenc.ae_conv as ae_conv
+import schedio_models.forger.experimental.autoenc.simple_autoencoder as simple_autoencoder
 
 logger = logging.getLogger(__name__)
 

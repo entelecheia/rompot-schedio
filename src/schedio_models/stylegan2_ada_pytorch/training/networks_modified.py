@@ -15,8 +15,8 @@ from forger.train.positional import PositionalEncodingFactory
 from torch_utils import misc, persistence
 from torch_utils.ops import bias_act, conv2d_resample, fma, upfirdn2d
 
-import models.stylegan2_ada_pytorch.dnnlib as dnnlib
-from models.stylegan2_ada_pytorch.training.networks import (
+import schedio_models.stylegan2_ada_pytorch.dnnlib as dnnlib
+from schedio_models.stylegan2_ada_pytorch.training.networks import (
     MappingNetwork,
     SynthesisBlock,
 )

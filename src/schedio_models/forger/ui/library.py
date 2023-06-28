@@ -17,7 +17,7 @@ import numpy as np
 import PIL
 import torch
 
-import models.forger.metrics.util
+import schedio_models.forger.metrics.util
 
 logger = logging.getLogger(__name__)
 

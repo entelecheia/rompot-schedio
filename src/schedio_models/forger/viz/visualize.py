@@ -20,12 +20,12 @@ from PIL import Image, ImageDraw, ImageFont
 # TODO: would be best to standardize image output functions, but this is pooled from many sources
 from skimage.io import imread, imsave
 
-import models.forger.metrics.util
-import models.forger.train.stitching
-import models.forger.ui.brush
-import models.forger.util.logging
-from models.forger.util.logging import log_tensor
-from models.forger.util.torch_data import (
+import schedio_models.forger.metrics.util
+import schedio_models.forger.train.stitching
+import schedio_models.forger.ui.brush
+import schedio_models.forger.util.logging
+from schedio_models.forger.util.logging import log_tensor
+from schedio_models.forger.util.torch_data import (
     get_image_data_iterator,
     get_image_data_iterator_from_dataset,
 )

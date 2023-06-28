@@ -16,15 +16,15 @@ import torchvision
 import wandb
 from torch.utils.data import DataLoader
 
-import models.forger.experimental.autoenc.factory as factory
-import models.forger.train.run_util as run_util
-from models.forger.experimental.autoenc.ae_conv import (
+import schedio_models.forger.experimental.autoenc.factory as factory
+import schedio_models.forger.train.run_util as run_util
+from schedio_models.forger.experimental.autoenc.ae_conv import (
     add_model_flags as ae_conv_add_model_flags,
 )
-from models.forger.experimental.autoenc.simple_autoencoder import (
+from schedio_models.forger.experimental.autoenc.simple_autoencoder import (
     add_model_flags as sa_add_model_flags,
 )
-from models.forger.util.logging import log_tensor
+from schedio_models.forger.util.logging import log_tensor
 
 logger = logging.getLogger(__name__)
 
