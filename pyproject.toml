@@ -35,6 +35,14 @@ ninja = "1.10.2"
 tensorboard = "2.4.1"
 tensorboardx = "2.1"
 
+[tool.poetry.group.torch]
+optional = true
+
+[tool.poetry.group.torch.dependencies]
+torch = "<2.0.0"
+torchvision = "<=0.15.2"
+torchmetrics = "0.9.3"
+
 [tool.poetry.group.dev]
 optional = true
 
