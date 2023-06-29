@@ -1,8 +1,8 @@
-hyfi
-
 # For forger
--e git+https://github.com/openai/CLIP.git@b46f5ac7587d2e1862f8b7b1573179d80dcdd620#egg=clip
-torchmetrics==0.9.3
+# -e git+https://github.com/openai/CLIP.git@b46f5ac7587d2e1862f8b7b1573179d80dcdd620#egg=clip
+# torch==1.14.0
+# torchvision==0.15.0
+# torchmetrics==0.9.3
 # click==8.1.3
 # flask==1.1.2
 # imageio-ffmpeg==0.4.3
