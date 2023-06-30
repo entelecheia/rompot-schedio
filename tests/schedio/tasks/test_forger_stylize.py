@@ -7,9 +7,7 @@ def test_forger_stylize():
     forger = ForgerStylizeTask(_config_name_="forger_stylize")
     HyFI.print(forger.dict())
     forger.batch.verbose = True
-    forger.batch.batch_num = 0
-    print(forger.batch)
-    # forger.paint()
+    forger.paint()
 
 
 if __name__ == "__main__":
