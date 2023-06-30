@@ -10,6 +10,7 @@ readme = "README.md"
 packages = [
     { include = "schedio", from = "src" },
     { include = "schedio_models", from = "src" },
+    { include = "forger", from = "src" },
 ]
 
 [tool.poetry.scripts]
