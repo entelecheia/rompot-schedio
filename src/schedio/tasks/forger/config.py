@@ -10,14 +10,14 @@ from hyfi.utils.logging import LOGGING
 from pydantic import Field
 from skimage.io import imread, imsave
 
-from schedio_models.forger.ui.brush import (
+from forger.ui.brush import (
     GanBrushOptions,
     PaintEngineFactory,
     PaintingHelper,
 )
-from schedio_models.forger.ui.library import BrushLibrary
-from schedio_models.forger.util import img_proc
-from schedio_models.forger.viz import style_transfer
+from forger.ui.library import BrushLibrary
+from forger.util import img_proc
+from forger.viz import style_transfer
 
 logger = LOGGING.getLogger(__name__)
 
@@ -31,7 +31,8 @@ class ForgerStylize(BaseConfig):
     output_dir: str = Field("outputs", description="Path to output directory")
     tmp_dir: str = Field("tmp", description="Path to tmp directory")
 
-    gan_checkpoint: str = Field(..., description="Path to GAN checkpoint")
+    model_name: str = Field("style2", description="Model name")
+    gan_checkpoint: str = Field("snapshot.pkl", description="Name of GAN checkpoint")
     encoder_checkpoint: Optional[str] = Field(
         None, description="Path to encoder checkpoint"
     )
@@ -52,7 +53,9 @@ class ForgerStylize(BaseConfig):
 
     @property
     def gan_checkpoint_path(self):
-        return os.path.join(self.model_dir, self.gan_checkpoint)
+        return os.path.join(
+            self.model_dir, "neube", self.model_name, self.gan_checkpoint
+        )
 
     @property
     def encoder_checkpoint_path(self):
@@ -62,7 +65,9 @@ class ForgerStylize(BaseConfig):
 
     @property
     def library_path(self):
-        return os.path.join(self.model_dir, self.library)
+        return os.path.join(
+            self.model_dir, "neube", self.model_name, "brush_libs", self.library
+        )
 
     @property
     def geom_image_path(self):
