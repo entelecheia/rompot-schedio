@@ -2572,36 +2572,42 @@ files = [
 
 [[package]]
 name = "pyspng"
-version = "0.1.0"
+version = "0.1.1"
 description = "Fast libspng-based PNG decoder"
 optional = false
 python-versions = "*"
 files = [
-    {file = "pyspng-0.1.0-cp35-cp35m-manylinux2010_i686.whl", hash = "sha256:f9afb32c8996c757ca8d073d4a30b84a3e7528681d2cc808b9827b717c929cdd"},
-    {file = "pyspng-0.1.0-cp35-cp35m-manylinux2010_x86_64.whl", hash = "sha256:dd0dbb0a32bd7f1cd3f1abc1d2d2fe16ea80f1117a99ebabb99ac32619fec1c8"},
-    {file = "pyspng-0.1.0-cp35-cp35m-win32.whl", hash = "sha256:47b1478ec960e052feb8e246af0ba3e0379972e125eef8402b1586868291e63c"},
-    {file = "pyspng-0.1.0-cp35-cp35m-win_amd64.whl", hash = "sha256:1d84cfcd38f7573a16bdd4468231747221379d9e59901a2f41bcd19285d20f62"},
-    {file = "pyspng-0.1.0-cp36-cp36m-manylinux2010_i686.whl", hash = "sha256:24be936bb88c46eb0c2d16fcff2ac6ecdeba08b1c587b4b43bd2f7238df331ee"},
-    {file = "pyspng-0.1.0-cp36-cp36m-manylinux2010_x86_64.whl", hash = "sha256:6051d5aa6ce5aa30a95172f23dfbcd18325288c3d923e7894990d7cfdb27b484"},
-    {file = "pyspng-0.1.0-cp36-cp36m-win32.whl", hash = "sha256:7a348380da3c06120796f8e9c7a85d2059895f1ba7d10c652c91b86306e6272c"},
-    {file = "pyspng-0.1.0-cp36-cp36m-win_amd64.whl", hash = "sha256:6f30a31926b9c8b1695985d5f85910aefc15759832761de2d345d395bb7a2603"},
-    {file = "pyspng-0.1.0-cp37-cp37m-manylinux2010_i686.whl", hash = "sha256:d322dab77dcc72a37c535afad1c52fb1c1a0c2890ad2bebd2ee869460de22a11"},
-    {file = "pyspng-0.1.0-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:c9ba6895113f60fdc89e38151748f58ceaeed8f967634ca2bda0f18c19dc6ef0"},
-    {file = "pyspng-0.1.0-cp37-cp37m-win32.whl", hash = "sha256:ef8bd2f32601c3f103d910af91a95bc6852b21929aa02986d05240bb7a59a5d5"},
-    {file = "pyspng-0.1.0-cp37-cp37m-win_amd64.whl", hash = "sha256:d688746976c771e0ec50757591938697c9ef81d6d18213ae64ff294a01979376"},
-    {file = "pyspng-0.1.0-cp38-cp38-manylinux2010_i686.whl", hash = "sha256:61819f9fa38c98732f3abcec674c7a3034d3005bb734426710b12740da76a72a"},
-    {file = "pyspng-0.1.0-cp38-cp38-manylinux2010_x86_64.whl", hash = "sha256:471b185fb92aaeb344f10434792137c6feb487057c6d782e57a57479afe01806"},
-    {file = "pyspng-0.1.0-cp38-cp38-win32.whl", hash = "sha256:e63535ddba7b9d70f33e7e240949181542fc420000110b556a01aef81d24da44"},
-    {file = "pyspng-0.1.0-cp38-cp38-win_amd64.whl", hash = "sha256:0eedcf4864a891043d67a66f5cffae61780d60931470ac072a83d8056e0a2345"},
-    {file = "pyspng-0.1.0-cp39-cp39-manylinux2010_i686.whl", hash = "sha256:4f296ef2d9a96b407164a3182d819a503ac0755c86c9f1e15b0f79b083f25086"},
-    {file = "pyspng-0.1.0-cp39-cp39-manylinux2010_x86_64.whl", hash = "sha256:28e83765fa61e587b1361b556153151165bbb1f600f381737aa1c93c0528483d"},
-    {file = "pyspng-0.1.0-cp39-cp39-win32.whl", hash = "sha256:ddd6231f2f9808a9eee619289ec2dc2db8a9d4d2e1a2c45cc9a28b64db8668ff"},
-    {file = "pyspng-0.1.0-cp39-cp39-win_amd64.whl", hash = "sha256:1f31981f75cab1275be0550ba00871f480685e58823d204047f00757a126b0bd"},
-    {file = "pyspng-0.1.0-pp36-pypy36_pp73-manylinux2010_x86_64.whl", hash = "sha256:dc8c6d7025fca3a5b4efc2eaee81f89bf64189f1f1f5392802b0824a61d99b75"},
-    {file = "pyspng-0.1.0-pp36-pypy36_pp73-win32.whl", hash = "sha256:6b7566f25ba5c0e5480f811e1f2616f26fc40882fa1643d1393b95b710ec1649"},
-    {file = "pyspng-0.1.0-pp37-pypy37_pp73-manylinux2010_x86_64.whl", hash = "sha256:b98d8733e1f9e30c2170a67c1cba3910c63965a81514af4b178e964bae6a7c07"},
-    {file = "pyspng-0.1.0-pp37-pypy37_pp73-win32.whl", hash = "sha256:49cfb234c1e7d7e37febff0a70e66730a23bc66d5679ffc8c9cb387943fe2841"},
-    {file = "pyspng-0.1.0.tar.gz", hash = "sha256:24522f89d0f3872e48a9c0b2de61a1417af9e7ea154c76978306cc937887e47a"},
+    {file = "pyspng-0.1.1-cp310-cp310-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:3e045bee9bdcf42cef7cbfbec1397cc19e1dae9b7ec7cffbb10bfe537b710dab"},
+    {file = "pyspng-0.1.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:638b989a89c674035a8f67ed864d16722636129846332646310a4f3aa5cce0dc"},
+    {file = "pyspng-0.1.1-cp310-cp310-musllinux_1_1_i686.whl", hash = "sha256:8c06e9251415c5a109a19e3ac54eb37d36b515deb29881456c16164485c1a5aa"},
+    {file = "pyspng-0.1.1-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:932e0ca55cd13549573c84691edce3f1f7f708c53984ab9c05a3081570c10894"},
+    {file = "pyspng-0.1.1-cp310-cp310-win32.whl", hash = "sha256:3a079698e679e538fbe47d9025f810b31ad6efed576bab92cffa15ad3e8bc57d"},
+    {file = "pyspng-0.1.1-cp310-cp310-win_amd64.whl", hash = "sha256:a8b2a2b474c6e9dc7073797130cebae091b8d9ad92600162ef90e4ed01467877"},
+    {file = "pyspng-0.1.1-cp311-cp311-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:c22771eeada21059663a71a67febf4fae9551d588e45c4b0b8644ffb7cb2e89a"},
+    {file = "pyspng-0.1.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3f43e47138d4b3e8450ef8bfcf3ab3ab5395fea2f353119cc9f7022f2b3062e8"},
+    {file = "pyspng-0.1.1-cp311-cp311-musllinux_1_1_i686.whl", hash = "sha256:220b5fe6ef2386fbdf60aa4be6cfed8930df26c07efc2a9a06f6683ced4c9af5"},
+    {file = "pyspng-0.1.1-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:be11cf2f62ffa4fecce02e58fe428f9e76fb5ee88bfee1742a19e05570742fb2"},
+    {file = "pyspng-0.1.1-cp311-cp311-win32.whl", hash = "sha256:c55ed0092a0d86f84ea10d20e0b64278a25d00770b893c36f39b55ea8fc6f09c"},
+    {file = "pyspng-0.1.1-cp311-cp311-win_amd64.whl", hash = "sha256:e26f9cae5810acb3238cd4e012356c9bc6c70d1032bf0103ed5ee12ec71c9a27"},
+    {file = "pyspng-0.1.1-cp37-cp37m-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:ba6b269314077c7bf6a6c19a0f64e99d8f66162a1e3c19f9bd65e965a94f5b9e"},
+    {file = "pyspng-0.1.1-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b7a7d1754897295b49db332a70651aae4bc78a7f1e53286d9b54923b51a28172"},
+    {file = "pyspng-0.1.1-cp37-cp37m-musllinux_1_1_i686.whl", hash = "sha256:b89150018f354ce988b9a8eee0a162282a449d5bc6add42ca6fe5af80f5cde60"},
+    {file = "pyspng-0.1.1-cp37-cp37m-musllinux_1_1_x86_64.whl", hash = "sha256:68f90b210823e23b887b21e2899c373324e1e96016cee295024b9002aa258c2f"},
+    {file = "pyspng-0.1.1-cp37-cp37m-win32.whl", hash = "sha256:9c7bbd6d335842dc630d1ca39573a0029f6c997db353d279f2ce537b791bb79e"},
+    {file = "pyspng-0.1.1-cp37-cp37m-win_amd64.whl", hash = "sha256:3674c19862ac7025a337179910fbf6eb7d0536233e8538da11d8a061b3755bde"},
+    {file = "pyspng-0.1.1-cp38-cp38-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:70ab54f5acdd049f414e2ee19136e18f83faa5d2487d405a939beeb81c1c1da1"},
+    {file = "pyspng-0.1.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b7d99bceba7d16867de663f73790b81a29da026f09e9d844899785a6267a6eef"},
+    {file = "pyspng-0.1.1-cp38-cp38-musllinux_1_1_i686.whl", hash = "sha256:cf81844dddf5b7e369aa994a3d2ac551cbc5b13182b19782c58ae2c1c4a664c3"},
+    {file = "pyspng-0.1.1-cp38-cp38-musllinux_1_1_x86_64.whl", hash = "sha256:e3fa4eb3e8fcaf03a79c57d77b0b055b40d6a7d73863a244442b49a9cfacaab3"},
+    {file = "pyspng-0.1.1-cp38-cp38-win32.whl", hash = "sha256:076e6932aabb8122c2e5ba0191c2525ffbbb1d0a643e279526a68b5168977997"},
+    {file = "pyspng-0.1.1-cp38-cp38-win_amd64.whl", hash = "sha256:3fbd309e414e06ee9202e8d9de6efc9155a1db8dfedd81f7b3057b3888f407ff"},
+    {file = "pyspng-0.1.1-cp39-cp39-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:51e18311edf8a9669ef3b9934b02360fcaa973b4bd74d07c59441f1714fdb5ab"},
+    {file = "pyspng-0.1.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:bd0515871ab9da2d60c4a642579ab5745a489e8a85d644b7c5ae0565e6e5b3c1"},
+    {file = "pyspng-0.1.1-cp39-cp39-musllinux_1_1_i686.whl", hash = "sha256:d3b1e43ec1818293141cfa75021fd7f98ecfa6f711abd9bebeb5a9441b8480bc"},
+    {file = "pyspng-0.1.1-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:95f61485669b49d61c90761acb33eb5f0b9f0d8343e3e95993554ba9e9af953c"},
+    {file = "pyspng-0.1.1-cp39-cp39-win32.whl", hash = "sha256:19798ecbca26ccb72c9fe9bd6730f12418dd37fa8f41f417c9a64cf8002d2b38"},
+    {file = "pyspng-0.1.1-cp39-cp39-win_amd64.whl", hash = "sha256:84c093a4ee0c1a23247c1953004cce83013fe999bb07bcfdf4ca8d727a46b30f"},
+    {file = "pyspng-0.1.1.tar.gz", hash = "sha256:73c16b980eb3af5f787a75cc23ea8ef0ec469be7dc5c7efd6309fcc86b55c9ba"},
 ]
 
 [package.dependencies]
@@ -3882,4 +3888,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8.1,<3.12"
-content-hash = "5b1921fbe58a1f76c5cca1d42b0d605a05ebe93dbbcaa5deef393158b5af3561"
+content-hash = "74a4a1d1b00ed98f58266b205bc6d622838558dac52d15baa81a337658262786"
