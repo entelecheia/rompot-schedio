@@ -1,8 +1,7 @@
 defaults:
-  - /path: __batch__
-  - /module: __init__
+  - __batch__
   - /forger: stylize
-  - /pipeline@pipeline: __test__
+  - /pipeline@pipeline: __init__
 
 _config_name_: forger_stylize
 project: ${oc.select:project,null}

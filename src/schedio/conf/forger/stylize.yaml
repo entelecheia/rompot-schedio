@@ -1,15 +1,16 @@
 _config_name_: stylize
 model_dir: ${oc.select:..path.task_models,workspace/models}
-input_dir: ${oc.select:..path.batch_outputs,workspace/inputs}
+input_dir: ${oc.select:..path.task_inputs,workspace/inputs}
 output_dir: ${oc.select:..path.batch_outputs,workspace/outputs}
 tmp_dir: ${oc.select:..path.task_tmp,workspace/tmp}
+model_name: style1
 gan_checkpoint: snapshot.pkl
 encoder_checkpoint:
 output_file_prefix: stylizations
 geom_image: images/large_guidance/lamali_sm.png
-stitching_mode: "all"
+stitching_mode: all
 feature_blending_level: 0
-library: neube/style2/brush_libs/projected_training_styles.pkl
+library: projected_training_styles.pkl
 style_id: playdoh10
 style_id2: # Optional parameter
 style_blend_alpha: 0.5
