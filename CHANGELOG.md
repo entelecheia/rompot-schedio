@@ -1,5 +1,21 @@
 <!--next-version-placeholder-->
 
+## v0.2.0 (2023-06-30)
+
+### Feature
+
+* **project:** Add "forger" package to src ([`a27401a`](https://github.com/entelecheia/rompot-schedio/commit/a27401abfa8bc91e788770a21ab7893b93758bb1))
+* **conf:** Add model, pipe, and pipeline configs ([`3e9cb52`](https://github.com/entelecheia/rompot-schedio/commit/3e9cb5215cd1840434319558ab702c0c9a431590))
+* **forger:** Add ForgerStylize class for stylizing images ([`b52fa8b`](https://github.com/entelecheia/rompot-schedio/commit/b52fa8bffc27b9f486e87de29d51728cd00f9daf))
+* **forger:** Add ForgerStylizeTask module ([`eda03eb`](https://github.com/entelecheia/rompot-schedio/commit/eda03eb4815bcd34e53fe03df574481c7b25feaf))
+* **conf:** Add stylize configuration file ([`17d15d3`](https://github.com/entelecheia/rompot-schedio/commit/17d15d332ec9a0c7b7fd66cd23cc033a06178356))
+
+### Fix
+
+* **dependencies:** Upgrade pyspng to 0.1.1 ([`d5c457e`](https://github.com/entelecheia/rompot-schedio/commit/d5c457eee273b424a89cd13aea4bfa856fdf66dc))
+* **forger:** Remove unnecessary batch initialization ([`6f6d303`](https://github.com/entelecheia/rompot-schedio/commit/6f6d3030e031b7a90fed4cd1c929d1df79344a1d))
+* **forger:** Initialize batch number ([`11c91f3`](https://github.com/entelecheia/rompot-schedio/commit/11c91f376db59efec95396059dc67e2b4a681293))
+
 ## v0.1.2 (2023-06-27)
 ### Fix
 * **readme:** Update codecov badge token ([`e419de3`](https://github.com/entelecheia/rompot-schedio/commit/e419de3e144737c526ee199e5244f2a23bd8b35a))
