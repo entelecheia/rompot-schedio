@@ -1,7 +1,9 @@
-from hyfi.utils.logging import LOGGING
-from hyfi.task.batch import BatchTaskConfig
-from schedio.tasks.forger.config import ForgerStylize
 from typing import Optional
+
+from hyfi.task.batch import BatchTaskConfig
+from hyfi.utils.logging import LOGGING
+
+from schedio.tasks.forger.config import ForgerStylize
 
 logger = LOGGING.getLogger(__name__)
 
