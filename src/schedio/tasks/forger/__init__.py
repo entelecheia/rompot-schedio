@@ -27,8 +27,6 @@ class ForgerStylizeTask(BatchTaskConfig):
         if self.path is None:
             raise ValueError("No path config provided.")
 
-        self.batch.init_batch_num()
-
         self.forger.input_dir = str(self.path.input_dir)
         self.forger.model_dir = str(self.path.model_dir)
         self.forger.output_dir = str(self.batch.batch_dir)
@@ -36,3 +34,4 @@ class ForgerStylizeTask(BatchTaskConfig):
         self.forger.output_file_prefix = self.batch.file_prefix
         logger.info("Painting...")
         self.forger.paint()
+        # self.save_config()
