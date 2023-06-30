@@ -9,7 +9,7 @@ repository = "https://github.com/entelecheia/rompot-schedio"
 readme = "README.md"
 packages = [
     { include = "schedio", from = "src" },
-    { include = "schedio_models", from = "src" },
+    { include = "thirdparty", from = "src" },
     { include = "forger", from = "src" },
 ]
 
@@ -95,7 +95,7 @@ exclude = [
     "venv",
     ".copier-template",
     ".refs",
-    "src/schedio_models",
+    "src/thirdparty",
 ]
 per-file-ignores = ['__init__.py:F401', '_version.py:W292']
 
