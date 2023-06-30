@@ -10,11 +10,7 @@ from hyfi.utils.logging import LOGGING
 from pydantic import Field
 from skimage.io import imread, imsave
 
-from forger.ui.brush import (
-    GanBrushOptions,
-    PaintEngineFactory,
-    PaintingHelper,
-)
+from forger.ui.brush import GanBrushOptions, PaintEngineFactory, PaintingHelper
 from forger.ui.library import BrushLibrary
 from forger.util import img_proc
 from forger.viz import style_transfer
@@ -80,6 +76,7 @@ class ForgerStylize(BaseConfig):
         return os.path.join(self.tmp_dir, "geo.png")
 
     def output_file_path(self, style_name):
+        os.makedirs(self.output_dir, exist_ok=True)
         return os.path.join(
             self.output_dir,
             f"{self.output_file_prefix}_{self.render_mode}_{str(style_name)}.png",
@@ -115,7 +112,7 @@ class ForgerStylize(BaseConfig):
             )
 
         patch_width = engine.G.img_resolution
-        geom = ForgerStylize._read_any_geo(self.geom_image)
+        geom = ForgerStylize._read_any_geo(self.geom_image_path)
         orig_geo_shape = geom.shape
         geom = ForgerStylize.pad_geo(geom, self.crop_margin)
 
@@ -142,7 +139,6 @@ class ForgerStylize(BaseConfig):
         )
         helper.set_render_mode(self.render_mode)
 
-        os.makedirs(os.path.dirname(self.output_file_prefix), exist_ok=True)
         with torch.no_grad():
             for i in tqdm.tqdm(range(len(stitching_crops)), total=len(stitching_crops)):
                 y = stitching_crops[i][0]
