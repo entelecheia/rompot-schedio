@@ -86,7 +86,7 @@ skip = [
 ]
 
 [tool.flake8]
-ignore = ['F401', 'E501', 'W503']
+ignore = ['F401', 'E501', 'W503', 'E203']
 exclude = [
     "node_modules",
     "_build",
@@ -95,6 +95,7 @@ exclude = [
     "venv",
     ".copier-template",
     ".refs",
+    "src/forger",
     "src/thirdparty",
 ]
 per-file-ignores = ['__init__.py:F401', '_version.py:W292']
