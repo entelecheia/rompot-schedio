@@ -2,10 +2,10 @@ import argparse
 import logging
 import os
 
-import forger.experimental.autoenc.factory as factory
 import numpy as np
 import torch
 
+import forger.experimental.autoenc.factory as factory
 from thirdparty.stylegan2_ada_pytorch import dnnlib, legacy
 from thirdparty.stylegan2_ada_pytorch.experiment.util import image, latent
 from thirdparty.stylegan2_ada_pytorch.training.training_loop_modified import (

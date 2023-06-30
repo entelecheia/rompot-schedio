@@ -14,6 +14,20 @@ import pickle
 import time
 
 import dnnlib
+import legacy
+import numpy as np
+import PIL.Image
+import psutil
+import torch
+import torchvision
+import torchvision.transforms.functional
+import wandb
+from metrics import metric_main
+from metrics.frechet_inception_distance import forger_compute_fid
+from skimage.io import imsave
+from torch_utils import misc, training_stats
+from torch_utils.ops import conv2d_gradfix, grid_sample_gradfix
+
 import forger.experimental.autoenc as autoenc
 
 # Forger imports
@@ -24,14 +38,6 @@ import forger.train.stitching
 import forger.ui.library
 import forger.util.logging
 import forger.viz.visualize
-import legacy
-import numpy as np
-import PIL.Image
-import psutil
-import torch
-import torchvision
-import torchvision.transforms.functional
-import wandb
 from forger.util.torch_data import get_image_data_iterator_from_dataset
 from forger.viz.visualize import (
     compose_stroke,
@@ -39,11 +45,6 @@ from forger.viz.visualize import (
     output_encoder_diagnostics,
     save_image_grid,
 )
-from metrics import metric_main
-from metrics.frechet_inception_distance import forger_compute_fid
-from skimage.io import imsave
-from torch_utils import misc, training_stats
-from torch_utils.ops import conv2d_gradfix, grid_sample_gradfix
 
 logger = logging.Logger(__name__)
 

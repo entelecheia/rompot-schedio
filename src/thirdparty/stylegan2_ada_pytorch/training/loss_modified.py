@@ -7,12 +7,13 @@
 # license agreement from NVIDIA CORPORATION & AFFILIATES is strictly prohibited.
 
 
-import forger.train.losses
-import forger.train.stitching
 import numpy as np
 import torch
 from torch_utils import misc, training_stats
 from torch_utils.ops import conv2d_gradfix
+
+import forger.train.losses
+import forger.train.stitching
 
 """
 This is the StyleGANLoss with geometry loss integration

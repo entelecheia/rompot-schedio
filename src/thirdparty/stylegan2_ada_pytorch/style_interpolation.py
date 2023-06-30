@@ -15,12 +15,13 @@ import re
 from typing import List, Optional
 
 import dnnlib
-import forger.experimental.autoenc.factory as factory
 import legacy
 import numpy as np
 import PIL
 import torch
 from train import CommaSeparatedList
+
+import forger.experimental.autoenc.factory as factory
 
 logger = logging.getLogger(__name__)
 

@@ -10,9 +10,10 @@ import logging
 
 import numpy as np
 import torch
-from forger.util.logging import log_tensor
 from torch_utils import misc, persistence
 from torch_utils.ops import bias_act, conv2d_resample, fma, upfirdn2d
+
+from forger.util.logging import log_tensor
 
 logger = logging.getLogger(__name__)
 

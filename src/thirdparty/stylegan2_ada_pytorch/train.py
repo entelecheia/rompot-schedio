@@ -18,13 +18,14 @@ from typing import Optional
 
 import dnnlib
 import dnnlib.util
-import forger.train.losses
-import forger.util.logging
 import torch
 import torch.distributed
 from metrics import metric_main
 from torch_utils import custom_ops, training_stats
 from training import training_loop_modified
+
+import forger.train.losses
+import forger.util.logging
 
 logger = logging.Logger(__name__)
 

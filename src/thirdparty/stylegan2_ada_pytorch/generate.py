@@ -18,6 +18,7 @@ import legacy
 import numpy as np
 import PIL.Image
 import torch
+
 from forger.experimental.autoenc.factory import create_autoencoder_from_checkpoint
 
 #----------------------------------------------------------------------------
