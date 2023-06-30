@@ -7,7 +7,11 @@ license = "MIT"
 homepage = "https://rompot-schedio.entelecheia.ai"
 repository = "https://github.com/entelecheia/rompot-schedio"
 readme = "README.md"
-packages = [{ include = "schedio", from = "src" }]
+packages = [
+    { include = "schedio", from = "src" },
+    { include = "thirdparty", from = "src" },
+    { include = "forger", from = "src" },
+]
 
 [tool.poetry.scripts]
 schedio = 'schedio.__cli__:main'
@@ -15,7 +19,30 @@ schedio = 'schedio.__cli__:main'
 [tool.poetry.dependencies]
 python = ">=3.8.1,<3.12"
 click = "^8.1.3"
-hyfi = "^0.15.0"
+hyfi = "0.16.1"
+flask = "1.1.2"
+imageio-ffmpeg = "0.4.3"
+itsdangerous = "2.0.1"
+pillow = "<=8.1.2"
+pyspng = "=0.1.0"
+scikit-image = ">=0.17.2"
+tornado = "6.1"
+werkzeug = "1.0.1"
+wandb = "0.12.2"
+scikit-learn = "0.23.2"
+psutil = "5.7.2"
+lpips = "0.1.3"
+ninja = "1.10.2"
+tensorboard = "2.4.1"
+tensorboardx = "2.1"
+
+[tool.poetry.group.torch]
+optional = true
+
+[tool.poetry.group.torch.dependencies]
+torch = "<2.0.0"
+torchvision = "<=0.15.2"
+torchmetrics = "0.9.3"
 
 [tool.poetry.group.dev]
 optional = true
@@ -34,20 +61,58 @@ pytest-cov = "^4.0.0"
 include = [".tasks.toml", ".tasks-extra.toml"]
 
 [tool.black]
-exclude = ['_version.py', 'node_modules', '_build', 'docs', 'tests', 'venv', '.copier-template', '.refs']
+exclude = [
+    '_version.py',
+    'node_modules',
+    '_build',
+    'docs',
+    'tests',
+    'venv',
+    '.copier-template',
+    '.refs',
+]
 
 [tool.isort]
 profile = "black"
-skip = ['_version.py', 'node_modules', '_build', 'docs', 'tests', 'venv', '.copier-template', '.refs']
+skip = [
+    '_version.py',
+    'node_modules',
+    '_build',
+    'docs',
+    'tests',
+    'venv',
+    '.copier-template',
+    '.refs',
+]
 
 [tool.flake8]
-ignore = ['F401', 'E501', 'W503']
-exclude = ["node_modules", "_build", "docs", "tests", "venv", ".copier-template", ".refs"]
+ignore = ['F401', 'E501', 'W503', 'E203']
+exclude = [
+    "node_modules",
+    "_build",
+    "docs",
+    "tests",
+    "venv",
+    ".copier-template",
+    ".refs",
+    "src/forger",
+    "src/thirdparty",
+]
 per-file-ignores = ['__init__.py:F401', '_version.py:W292']
 
 [tool.mypy]
 namespace_packages = true
-exclude = ["node_modules", "build", "_build", "dist", "docs", "tests", "venv", ".copier-template", ".refs"]
+exclude = [
+    "node_modules",
+    "build",
+    "_build",
+    "dist",
+    "docs",
+    "tests",
+    "venv",
+    ".copier-template",
+    ".refs",
+]
 # 3rd party import
 ignore_missing_imports = true
 # dynamic typing
@@ -89,18 +154,17 @@ version_toml = "pyproject.toml:tool.poetry.version"
 version_variable = "src/schedio/_version.py:__version__"
 version_pattern = 'src/schedio/conf/about/__init__.yaml:version: "{version}"'
 version_source = "tag"
-commit_version_number = true # required for version_source = "tag"
+commit_version_number = true                                                  # required for version_source = "tag"
 commit_subject = "chore(release): :rocket: {version} [skip ci]"
 prerelease_tag = "rc"
 major_on_zero = true
 tag_commit = true
 changelog_file = "CHANGELOG.md"
-upload_to_repository = true
+upload_to_repository = false
 upload_to_release = true
-hvcs = "github" # hosting version control system, gitlab is also supported
+hvcs = "github"                                                               # hosting version control system, gitlab is also supported
 build_command = "poetry build --no-cache"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-

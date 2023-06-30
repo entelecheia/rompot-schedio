@@ -47,7 +47,9 @@ jobs:
 
       # install dependencies
       - name: Install dependencies for linters
-        run: poe install-dev
+        run: |
+          poe install-dev
+          poetry run pip install "torch<2.0.0" "torchvision<=0.15.2" torchmetrics
 
       # run linters
       - name: Run linters

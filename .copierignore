@@ -1,2 +1,6 @@
 .copierignore
+.gitignore
 CHANGELOG.md
+pyproject.toml
+requirements.txt
+.tasks-extra.toml
