@@ -1,15 +1,15 @@
 defaults:
-  - /path: __task__
+  - /path: __batch__
   - /module: __init__
-  - /pipeline@pipeline1: __test_general__
-  - /pipeline@pipeline2: __test_dataframe__
+  - /forger: stylize
+  - /pipeline@pipeline: __test__
 
-_config_name_: __test__
+_config_name_: forger_stylize
 project: ${oc.select:project,null}
-task_name: demo-task
+task_name: forger
+batch_name: stylize
 task_root: ${oc.select:project.path.project_workspace_root,workspace/tasks}/${.task_name}
 autoload: false
 version: "0.0.0"
 pipelines:
-  - pipeline1
-  - pipeline2
+  - pipeline
