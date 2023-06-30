@@ -18,6 +18,7 @@ logger = logging.getLogger(__name__)
 
 class CatmullRomSpline:
     """Rough implementation of multi-node Centripetal Catmull-Rom splines."""
+
     # TODO: needs to be cleaned up
     # TODO: matrix formulation would be more efficient
     # TODO: need rough arc length parameterization or way to cut up spline into windows
@@ -32,20 +33,26 @@ class CatmullRomSpline:
         self.pts = ctr_pts
         self.alpha = alpha
         self.ts = np.concatenate(
-            [np.zeros((1), dtype=np.float32),
-             np.power(np.linalg.norm(self.pts[1:, :] - self.pts[:-1, :], axis=1),
-                      self.alpha)], axis=0)
+            [
+                np.zeros((1), dtype=np.float32),
+                np.power(
+                    np.linalg.norm(self.pts[1:, :] - self.pts[:-1, :], axis=1),
+                    self.alpha,
+                ),
+            ],
+            axis=0,
+        )
         self.ts = list(np.cumsum(self.ts))
 
     def sample_t(self, t_global):
         # t_global 0...1
         idx = bisect.bisect_left(self.ts, t_global) - 2
         if idx > self.pts.shape[0] - 4:
-            logger.warning('idx {} out of bounds for target {}'.format(idx, t_global))
+            logger.warning("idx {} out of bounds for target {}".format(idx, t_global))
             idx = self.pts.shape[0] - 4
-        #t_global = t_global * (self.pts.shape[0] - 3)
-        #idx = self.pts.shape[0] - math.floor(t_global)
-        #t_local = t_global - idx
+        # t_global = t_global * (self.pts.shape[0] - 3)
+        # idx = self.pts.shape[0] - math.floor(t_global)
+        # t_local = t_global - idx
         return self.sample_t_one(t_global, idx)
 
     def sample_t_one(self, t, idx):
@@ -54,38 +61,40 @@ class CatmullRomSpline:
         :param t:
         :return:
         """
-        #t0 = 0
-        #t1 = math.pow(np.linalg.norm(self.pts[idx + 1, :] - self.pts[idx, :]), self.alpha)
-        #t2 = t1 + math.pow(np.linalg.norm(self.pts[idx + 2, :] - self.pts[idx + 1, :]), self.alpha)
-        #t3 = t2 + math.pow(np.linalg.norm(self.pts[idx + 3, :] - self.pts[idx + 2, :]), self.alpha)
+        # t0 = 0
+        # t1 = math.pow(np.linalg.norm(self.pts[idx + 1, :] - self.pts[idx, :]), self.alpha)
+        # t2 = t1 + math.pow(np.linalg.norm(self.pts[idx + 2, :] - self.pts[idx + 1, :]), self.alpha)
+        # t3 = t2 + math.pow(np.linalg.norm(self.pts[idx + 3, :] - self.pts[idx + 2, :]), self.alpha)
         t0 = self.ts[idx]
         t1 = self.ts[idx + 1]
         t2 = self.ts[idx + 2]
         t3 = self.ts[idx + 3]
 
-        #t_range = t2 - t1
-        #t = (t_local * t_range + t1)
-        logger.debug('T 1, 2, 3 = {}, {}, {} --> {}'.format(t1, t2, t3, t))
+        # t_range = t2 - t1
+        # t = (t_local * t_range + t1)
+        logger.debug("T 1, 2, 3 = {}, {}, {} --> {}".format(t1, t2, t3, t))
 
-        A1 = (t1 - t) / (t1 - t0) * self.pts[idx, :] + (t - t0) / (t1 - t0) * self.pts[idx + 1, :]
-        A2 = (t2 - t) / (t2 - t1) * self.pts[idx + 1, :] + (t - t1) / (t2 - t1) * self.pts[idx + 2, :]
-        A3 = (t3 - t) / (t3 - t2) * self.pts[idx + 2, :] + (t - t2) / (t3 - t2) * self.pts[idx + 3, :]
+        A1 = (t1 - t) / (t1 - t0) * self.pts[idx, :] + (t - t0) / (t1 - t0) * self.pts[
+            idx + 1, :
+        ]
+        A2 = (t2 - t) / (t2 - t1) * self.pts[idx + 1, :] + (t - t1) / (
+            t2 - t1
+        ) * self.pts[idx + 2, :]
+        A3 = (t3 - t) / (t3 - t2) * self.pts[idx + 2, :] + (t - t2) / (
+            t3 - t2
+        ) * self.pts[idx + 3, :]
         B1 = (t2 - t) / (t2 - t0) * A1 + (t - t0) / (t2 - t0) * A2
         B2 = (t3 - t) / (t3 - t1) * A2 + (t - t1) / (t3 - t1) * A3
         C = (t2 - t) / (t2 - t1) * B1 + (t - t1) / (t2 - t1) * B2
 
+        # p(t) = ...
+        # t(s) = ..?..
+        # ds/dt
 
-       # p(t) = ...
-       # t(s) = ..?..
-       # ds/dt
-
-
-        #tvec = np.array([t ** 3, t ** 2, t, 1], dtype=self.pts.dtype).reshape((1, 4)) * self.tension  # Fix
-        #res = np.matmul(np.matmul(tvec, self.mat), self.pts)
+        # tvec = np.array([t ** 3, t ** 2, t, 1], dtype=self.pts.dtype).reshape((1, 4)) * self.tension  # Fix
+        # res = np.matmul(np.matmul(tvec, self.mat), self.pts)
         res = C
         return res
-
-
 
     def sample_s(self, nsamples):
         """
@@ -126,8 +135,10 @@ def sample_control_pts(npts, radius_mean=0.8, radius_sigma=0.3):
         theta = np.random.random(1)[0] * 2 * math.pi
         delta = [math.cos(theta) * radius, math.sin(theta) * radius]
 
-        return [min(1.0, max(-1.0, prev[0])) + delta[0],
-                min(1.0, max(-1.0, prev[0])) + delta[1]]
+        return [
+            min(1.0, max(-1.0, prev[0])) + delta[0],
+            min(1.0, max(-1.0, prev[0])) + delta[1],
+        ]
 
     for i in range(1, npts):
         res[i, :] = _sample_next(res[i - 1, :])
@@ -136,7 +147,7 @@ def sample_control_pts(npts, radius_mean=0.8, radius_sigma=0.3):
 
 
 def normalize_coord(x, width, clamp=True):
-    """ Normalizes coord in [-1, 1] to be in [0, width-1] range."""
+    """Normalizes coord in [-1, 1] to be in [0, width-1] range."""
     tmp = round((x + 1.0) / 2.0 * width)
     if not clamp:
         return tmp
@@ -166,12 +177,13 @@ def draw_spline_custom(spline, image: np.ndarray, nsamples):
 
     return image
 
+
 def draw_spline_lib(spline, image: np.ndarray, nsamples):
     """
-        :param spline: splines.CatmullRom - The spline object to be drawn to image
-        :param image: numpy.ndarray - 3D array of shape H x W x C
-        :param nsamples: int - number of sample points to use for generating the spline
-        :return: numpy.ndarray - 3D array of shape H x W x C
+    :param spline: splines.CatmullRom - The spline object to be drawn to image
+    :param image: numpy.ndarray - 3D array of shape H x W x C
+    :param nsamples: int - number of sample points to use for generating the spline
+    :return: numpy.ndarray - 3D array of shape H x W x C
     """
     assert nsamples is not None
     width = image.shape[0]
@@ -212,8 +224,8 @@ def draw_spline_debug(spline, nsamples=8, width=256):
         y = normalize_coord(spline.pts[p, 1], width)
         blue = p / (spline.pts.shape[0] - 1)
         red = 1 - blue
-        image[y-1:y+1, x-1:x+1, 0] = 255 * red
-        image[y-1:y+1, x-1:x+1, 1] = 0
-        image[y-1:y+1, x-1:x+1, 2] = 255 * blue
+        image[y - 1 : y + 1, x - 1 : x + 1, 0] = 255 * red
+        image[y - 1 : y + 1, x - 1 : x + 1, 1] = 0
+        image[y - 1 : y + 1, x - 1 : x + 1, 2] = 255 * blue
 
     return image
