@@ -11,7 +11,7 @@ import re
 
 import numpy as np
 import torch
-from forger.train.positional import PositionalEncodingFactory
+from schedio_models.forger.train.positional import PositionalEncodingFactory
 from torch_utils import misc, persistence
 from torch_utils.ops import bias_act, conv2d_resample, fma, upfirdn2d
 

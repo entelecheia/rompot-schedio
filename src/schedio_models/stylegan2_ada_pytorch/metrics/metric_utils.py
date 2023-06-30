@@ -17,7 +17,7 @@ import dnnlib
 import numpy as np
 import torch
 import torchvision
-from forger.viz.visualize import compose_stroke_with_canvas
+from schedio_models.forger.viz.visualize import compose_stroke_with_canvas
 from skimage.io import imsave
 from torch_utils import misc
 from torch_utils.misc import InfiniteSampler

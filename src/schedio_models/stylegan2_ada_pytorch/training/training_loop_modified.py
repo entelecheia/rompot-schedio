@@ -32,8 +32,8 @@ import torch
 import torchvision
 import torchvision.transforms.functional
 import wandb
-from forger.util.torch_data import get_image_data_iterator_from_dataset
-from forger.viz.visualize import (
+from schedio_models.forger.util.torch_data import get_image_data_iterator_from_dataset
+from schedio_models.forger.viz.visualize import (
     compose_stroke,
     compose_stroke_with_canvas,
     output_encoder_diagnostics,
