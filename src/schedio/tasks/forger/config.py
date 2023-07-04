@@ -7,7 +7,7 @@ import torch.utils.data
 import tqdm
 from hyfi.composer import BaseConfig
 from hyfi.utils.logging import LOGGING
-from pydantic import Field, ConfigDict
+from pydantic import ConfigDict, Field
 from skimage.io import imread, imsave
 
 from forger.ui.brush import GanBrushOptions, PaintEngineFactory, PaintingHelper
