@@ -1,5 +1,14 @@
 <!--next-version-placeholder-->
 
+## v0.2.1 (2023-07-04)
+
+### Fix
+
+* **forger_stylize:** Update print method ([`4c0b4e9`](https://github.com/entelecheia/rompot-schedio/commit/4c0b4e917c7dddd37599b75d13c31493600f511e))
+* **forger:** Update config naming conventions ([`cc0dbb0`](https://github.com/entelecheia/rompot-schedio/commit/cc0dbb072efc7e0b321a493db8eeefd3b82d08c6))
+* **schedio:** Update task_root configuration ([`1f3e1a3`](https://github.com/entelecheia/rompot-schedio/commit/1f3e1a3a15eb1e152cf2adf2d896cb0973379e7e))
+* **dependencies:** Upgrade hyfi to 1.0.2 ([`c8a9f95`](https://github.com/entelecheia/rompot-schedio/commit/c8a9f9567633afbc275673617c8b3d79400f99ba))
+
 ## v0.2.0 (2023-06-30)
 
 ### Feature

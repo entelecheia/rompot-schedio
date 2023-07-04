@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "rompot-schedio"
-version = "0.2.0"
+version = "0.2.1"
 description = "A Python Library for Robotic Drawings"
 authors = ["Young Joon Lee <entelecheia@hotmail.com>"]
 license = "MIT"
