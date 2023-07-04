@@ -7,7 +7,7 @@ import torch.utils.data
 import tqdm
 from hyfi.composer import BaseConfig
 from hyfi.utils.logging import LOGGING
-from pydantic import Field
+from pydantic import Field, ConfigDict
 from skimage.io import imread, imsave
 
 from forger.ui.brush import GanBrushOptions, PaintEngineFactory, PaintingHelper
@@ -19,8 +19,8 @@ logger = LOGGING.getLogger(__name__)
 
 
 class ForgerStylize(BaseConfig):
-    config_group = "forger"
-    config_name = "stylize"
+    _config_group_ = "forger"
+    _config_name_ = "stylize"
 
     model_dir: str = Field("models", description="Path to model directory")
     input_dir: str = Field("inputs", description="Path to input directory")
@@ -46,6 +46,8 @@ class ForgerStylize(BaseConfig):
     color_mode: Optional[str] = Field(None, description="Color mode")
     on_white: bool = Field(False, description="On white")
     debug: bool = Field(False, description="Debug mode")
+
+    model_config = ConfigDict(protected_namespaces=())
 
     @property
     def gan_checkpoint_path(self):
