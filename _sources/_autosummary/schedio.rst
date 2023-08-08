@@ -34,4 +34,5 @@
    :recursive:
 
    schedio.conf
+   schedio.tasks
 
