@@ -21,11 +21,3 @@ schedio.tasks
 
 
 
-.. rubric:: Modules
-
-.. autosummary::
-   :toctree:
-   :recursive:
-
-   schedio.tasks.forger
-
