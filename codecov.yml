@@ -12,6 +12,4 @@ coverage:
         informational: true
 # sample regex patterns
 ignore:
-  - "src/forger"
-  - "src/thirdparty"
   - "tests"
