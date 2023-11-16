@@ -11,4 +11,5 @@ opencv-python>=4.1.0.25
 safetensors
 gradio
 diffusers
+hyfi
 jupyterlab
