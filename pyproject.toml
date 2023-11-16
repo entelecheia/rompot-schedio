@@ -7,9 +7,7 @@ license = "MIT"
 homepage = "https://rompot-schedio.entelecheia.ai"
 repository = "https://github.com/entelecheia/rompot-schedio"
 readme = "README.md"
-packages = [
-    { include = "schedio", from = "src" },
-]
+packages = [{ include = "schedio", from = "src" }]
 
 [tool.poetry.scripts]
 schedio = 'schedio.__cli__:main'
@@ -48,7 +46,7 @@ optional = true
 [tool.poetry.group.dev.dependencies]
 python-semantic-release = "^7.33.1"
 isort = "^5.12.0"
-black = ">=23.0.0,<=23.3.0"
+black = ">=23.0.0"
 flake8 = "^6.0.0"
 mypy = "^1.0.0"
 flake8-pyproject = "^1.2.2"
@@ -59,16 +57,21 @@ pytest-cov = "^4.0.0"
 include = [".tasks.toml", ".tasks-extra.toml"]
 
 [tool.black]
-exclude = [
-    '_version.py',
-    'node_modules',
-    '_build',
-    'docs',
-    'tests',
-    'venv',
-    '.copier-template',
-    '.refs',
-]
+# 'extend-exclude' excludes files or directories in addition to the defaults
+extend-exclude = '''
+# A regex preceded with ^/ will apply only to files and directories
+# in the root of the project.
+(
+  _version.py
+  | .refs
+  | .copier-template
+  | tests
+  | docs
+  | book
+  | _build
+  | node_modules
+)
+'''
 
 [tool.isort]
 profile = "black"
