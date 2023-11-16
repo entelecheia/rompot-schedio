@@ -55,11 +55,11 @@ WORKDIR $WORKSPACE_ROOT
 COPY ./.docker/scripts/ ./scripts/
 RUN if [ -f ./scripts/requirements-base.txt ]; then pip3 install -r ./scripts/requirements-base.txt; fi
 # Installs Python packages required for the build
-RUN pip install -U pip setuptools
+RUN pip3 install -U pip3 setuptools
 # Optional: Installs Ninja for faster builds
-RUN pip install ninja
+# RUN pip3 install ninja
 # Installs xformers from Facebook research
-RUN pip install -v -U git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
+# RUN pip3 install -v -U git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
 
 # Sets the time zone within the container
 ENV TZ="Asia/Seoul"
