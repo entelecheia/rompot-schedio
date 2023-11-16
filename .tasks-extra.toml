@@ -19,14 +19,14 @@ shell = """
 """
 help = "Copy hyfi conf to src/schedio/conf"
 
-[tool.poe.tasks.install-clip]
+[tool.poe.tasks.add-torch-source]
 shell = """
-  poetry run pip install -e git+https://github.com/openai/CLIP.git@b46f5ac7587d2e1862f8b7b1573179d80dcdd620#egg=clip
+  poetry source add --priority=explicit pytorch-gpu-src https://download.pytorch.org/whl/cu118
 """
-help = "Install clip"
+help = "Add torch source"
 
 [tool.poe.tasks.install-torch]
 shell = """
-  poetry run pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1 --upgrade --extra-index-url https://download.pytorch.org/whl/cu117
+  poetry add --source pytorch-gpu-src torch torchvision torchaudio
 """
-help = "Install torch 1.13.1, torchvision 0.14.1, torchaudio 0.13.1"
+help = "Install torch dependencies"
