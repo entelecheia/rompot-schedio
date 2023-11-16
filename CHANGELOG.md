@@ -1,5 +1,14 @@
 <!--next-version-placeholder-->
 
+## v0.3.0 (2023-11-16)
+
+### Feature
+
+* **github-actions:** Add deploy-app-image and deploy-base-image workflow files ([`8dcce2a`](https://github.com/entelecheia/rompot-schedio/commit/8dcce2a3bfc4fbf5fcb84ed13e6199745ce05356))
+* **github-scripts:** Add free-disk-space.sh script ([`3895d05`](https://github.com/entelecheia/rompot-schedio/commit/3895d05f80194562015a326cbabff81236a82b30))
+* **docker:** Add Dockerfile for app and base ([`f3ed564`](https://github.com/entelecheia/rompot-schedio/commit/f3ed564af27bb92c1b49b85a1788788ce5972473))
+* **schedio:** Add about schedio.yaml file ([`6ca18d4`](https://github.com/entelecheia/rompot-schedio/commit/6ca18d43a26c8b9657c7a172ef2a84bfaa92289b))
+
 ## v0.2.1 (2023-07-04)
 
 ### Fix
