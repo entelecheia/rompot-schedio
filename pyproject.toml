@@ -15,7 +15,7 @@ schedio = 'schedio.__cli__:main'
 [tool.poetry.dependencies]
 python = ">=3.8.1,<3.12"
 click = "^8.1.3"
-hyfi = "^1.34.0"
+hyfi = "^1.34.1"
 # flask = "1.1.2"
 # imageio-ffmpeg = "0.4.3"
 # itsdangerous = "2.0.1"
@@ -153,7 +153,6 @@ tag_format = "v$version"
 branch = "main"
 version_toml = "pyproject.toml:tool.poetry.version"
 version_variable = "src/schedio/_version.py:__version__"
-version_pattern = 'src/schedio/conf/about/__init__.yaml:version: "{version}"'
 version_source = "tag"
 commit_version_number = true                                                  # required for version_source = "tag"
 commit_subject = "chore(release): :rocket: {version} [skip ci]"
