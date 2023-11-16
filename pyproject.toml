@@ -36,9 +36,9 @@ hyfi = "^1.34.1"
 optional = true
 
 [tool.poetry.group.torch.dependencies]
-torch = "<2.0.0"
-torchvision = "<=0.15.2"
-torchmetrics = "0.9.3"
+torch = {version = "^2.1.1+cu118", source = "pytorch-gpu-src"}
+torchvision = {version = "^0.16.1+cu118", source = "pytorch-gpu-src"}
+torchaudio = {version = "^2.1.1+cu118", source = "pytorch-gpu-src"}
 
 [tool.poetry.group.dev]
 optional = true
@@ -52,6 +52,12 @@ mypy = "^1.0.0"
 flake8-pyproject = "^1.2.2"
 pytest = "^7.2.1"
 pytest-cov = "^4.0.0"
+
+
+[[tool.poetry.source]]
+name = "pytorch-gpu-src"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"
 
 [tool.poe]
 include = [".tasks.toml", ".tasks-extra.toml"]
