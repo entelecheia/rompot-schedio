@@ -33,5 +33,6 @@
    :toctree:
    :recursive:
 
+   schedio.conf
    schedio.tasks
 
